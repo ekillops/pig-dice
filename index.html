@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
      <link rel="stylesheet" href="css/styles.css" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
      <script src="js/jquery-3.1.1.js"></script>
      <script src="js/scripts.js"></script>
 
@@ -16,28 +17,29 @@
       <div class="col-md-4">
 
 
-      <div id="player1" class="well">
-        <h3>Player 1</h3> <h4>Total: <span id="player1Total"></span></h4>
+      <div id="player1Box" class="well">
+        <h3 id="player1Name"></h3> <h3>Total: <span id="player1Total"></span></h3>
       </div>
     </div><!--col1 end -->
 
     <div class="col-md-4">
       <h1>Pig Dice</h1>
-      <div id="">
-        <h3>It's <span id="activePlayer"></span>'s turn</h3>
-      </div>
+      <!-- <div id="">
+        <h4>It's <span id="activePlayer"></span>'s turn</h4>
+      </div> -->
 
       <div id="scoreBox" class="well">
         <h3>Turn Total: <span id="turnTotal"></span></h3>
       </div>
 
       <div id="diceResult" class="well">
-        <h3>You rolled: <span id="dieRoll" ></span></h3>
+        <h3 class="text-center">You rolled</h3>
+        <div id="dieRoll">
+        </div>
       </div>
-
-      <button id="roll" class="btn btn-primary">Roll</button>
-      <button id="hold" class="btn btn-success">Hold</button>
-      <button id="reset" class="btn btn-warning">Reset</button>
+      <button id="roll" class="btn">Roll</button>
+      <button id="hold" class="btn">Hold</button>
+      <button id="reset" class="btn">Reset</button>
 
       <div id="gameEnd">
         <h3>Game Over! You Win!</h3>
@@ -45,8 +47,8 @@
     </div><!--col3 end -->
 
     <div class="col-md-4">
-      <div id="player2" class="well">
-        <h3>Player 2 </h3> <h4>Total: <span id="player2Total"></span></h4>
+      <div id="player2Box" class="well">
+        <h3 id="player2Name"></h3> <h3>Total: <span id="player2Total"></span></h3>
       </div>
       </div><!--col2 end -->
 
