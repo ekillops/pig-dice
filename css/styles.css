@@ -17,8 +17,14 @@
   height: 80px;
 }
 
-body {
+.container {
   background-image: url("../img/bg.png");
+  height: 500px;
+  padding: 50px;
+
+}
+body {
+
   background-size:auto;
   font-family: 'Raleway', sans-serif;
 
