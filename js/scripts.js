@@ -1,4 +1,4 @@
-/*Back End*/
+/* Back End */
 
 
 //Taken from stackoverflow: generate a random integer
@@ -6,14 +6,19 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+//Simulate a roll of a 6 sided die
 function rollD6() {
-  roll = getRandomInt(1, 6);
+  var roll = getRandomInt(1, 6);
   return roll;
 }
 
+function pigRoll(){
+
+  if (pigRoll > 1) {}
+};
 
 
-/*Front End*/
+/* Front End */
 
 
 
@@ -26,7 +31,7 @@ $(document).ready(function(){
 
 
 
-  //Roll button click
+/* Roll button click */
   $("button#roll").click(function(){
 
     //Roll die
@@ -35,23 +40,49 @@ $(document).ready(function(){
     $("#dieRoll").text(dieRoll);
 
 
-    //Add dieRoll to turnTotal
-    turnTotal += dieRoll;
+    //Add dieRoll to turnTotal unless a 1 is rolled
+    if (dieRoll != 1) {
+      turnTotal += dieRoll;
+    } else {
+      turnTotal = 0;
+    }
+
     //Display result to turnTotal span
     $("#turnTotal").text(turnTotal);
 
   });
 
-  //Hold button click
+/*  Hold button click  */
   $("button#hold").click(function(){
 
     //Add turn total to player score
     playerTotal += turnTotal;
+
     //Display result to playerTotal span
     $("#playerTotal").text(playerTotal);
 
-    $("#dieRoll, #turnTotal").empty();
+    //Reset turnTotal
+    turnTotal = 0;
 
+    if (playerTotal > 99) {
+      //Display end game message
+      $("#gameEnd").show();
+    } else {
+      //Clear counters
+      $("#dieRoll, #turnTotal").empty();
+    }
+
+  });
+
+/*  Reset button */
+
+  $("button#reset").click(function(){
+    //assigns player total to 0
+    playerTotal = 0;
+    //assigns turn total to 0
+    turnTotal = 0;
+    //clears values in display fields
+    $("#dieRoll, #turnTotal, #playerTotal").empty();
 
   });
 
