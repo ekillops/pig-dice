@@ -1,3 +1,30 @@
+* {
+  font-family: helvetica,arial,sans-serif;
+}
+
+.btn {
+
+}
+
+button {
+  width: 81px;
+}
+
+
 #gameEnd {
   display:none;
+}
+
+#player1, #player2 {
+  width: 250px;
+  margin-top: 150px;
+}
+
+
+#scoreBox {
+  width: 250px;
+}
+
+#diceResult {
+  width: 250px;
 }
